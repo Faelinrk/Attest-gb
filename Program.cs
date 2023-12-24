@@ -11,4 +11,16 @@
         }
         return count;
     }
+    static string[] FilterArrayToArray(string[] oldArray, int elementLen){
+        int newArrayLen = CountNumEnements(oldArray, elementLen);
+        string[] newArray = new string[newArrayLen];
+        int newElementIndex = 0;
+        for (int i = 0; i < oldArray.Length; i++){
+            if (oldArray[i].Length <= elementLen){
+                newArray[newElementIndex] = oldArray[i];
+                newElementIndex++;
+            }
+        }
+        return newArray;
+    }
 }
