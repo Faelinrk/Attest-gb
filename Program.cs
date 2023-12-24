@@ -1,6 +1,15 @@
 ﻿class Program{
     static void Main(string[] args){
-        string[] firstArray = {"Арбузы", "Бананы", "Мак", "Акакий", "Три"};
+        string[] firstArray = {"Арбузы", "Бананы", "Мак", "Акакий", "Три", "Тур", "Бо"};
+        string[] newArray = FilterArrayToArray(firstArray, 3);
+        PrintArray(firstArray);
+        PrintArray(newArray);
+    }
+    static void PrintArray(string[] array){
+        for (int i = 0; i < array.Length; i++){
+            Console.WriteLine(array[i]);
+        }
+        Console.WriteLine();
     }
     static int CountNumEnements(string[] array, int elementLen){
         int count = 0;
